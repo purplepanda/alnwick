@@ -144,7 +144,7 @@
                 position: absolute;
                 opacity: 1;
                 border: 1px solid $grey;
-                background-color: $white80;
+                background-color: $white;
                 border-radius: 1px;
                 padding: 1em;
                 margin-top: 1em;
@@ -211,7 +211,8 @@
         line-height: 2.5;
         
         a {
-            font-family: $fontEBGaramondBold;
+            font-family: $fontEBGaramondMedium;
+            font-size: .85em;
             border-bottom: 2px solid transparent;
             text-transform: uppercase;
             color: $grey;

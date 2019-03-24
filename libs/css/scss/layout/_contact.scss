@@ -1,45 +1,96 @@
-.contact {
-    background-image: url(../../../../libs/img/moma-gallery-blur.jpg);
+#contact {
+    padding: 0;
+    max-width: none;
+    background-image: url(../../../../libs/img/featured-canary-wharf.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-}
-
-#contact {
+    
+    > div {
+        padding: 100px 5% 50px;
+        max-width: 1200px;
+        margin: 0 auto;
+        
+        @media only screen and (min-width: $bp-mobile) {
+            padding: 150px 5% 50px;
+        }
+    }
+    
     section {
-        background-color: $white50;
-        border: 5px solid $white;
+        background-color: $white80;
         padding: 10% 1em;
+        border-radius: 1px;
+        -webkit-box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.5);
+        -moz-box-shadow:    0px 1px 5px 1px rgba(0,0,0,0.5);
+        -ms-box-shadow:     0px 1px 5px 1px rgba(0,0,0,0.5);
+        box-shadow:         0px 1px 5px 1px rgba(0,0,0,0.5);
         
         @media only screen and (min-width: $bp-xsmall) {
             padding: 10%;
         }
         
-        @media only screen and (min-width: $bp-mobile) {
-            padding: 10% 5%;
+        @media only screen and (min-width: $bp-tablet) {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 10% 2.5%;
         }
         
         .divider {
-            background-color: $white80;
+            background-color: $greyDark;
+            margin: 10% 20%;
             
-            @media only screen and (min-width: $bp-mobile) {
+            @media only screen and (min-width: $bp-tablet) {
                 display: none;
             }
         }
         
         article {
-            h2, h5, p {
+            padding-bottom: 1em;
+            
+            @media only screen and (min-width: $bp-tablet) {
+                width: 47.5%;
+            }
+            
+            .contact-info {
+                max-width: 250px;
+                margin: 0 auto;
+                
+                @media only screen and (min-width: $bp-mobile) {
+                    max-width: 330px;
+                }
+            }
+
+            h2, h5 {
                 text-align: center;
             }
             
-            p {
-                font-size: .9em;
+            h5 {
+                font-family: $fontLatoRegular;
+                margin: 0 0 2em;
+            }
+            
+            h2 {
+                font-size: 1.25em;
+                margin: 0 0 .5em;
                 
-                @media only screen and (min-width: $bp-xsmall) {
+                @media only screen and (min-width: $bp-mobile) {
+                    font-size: 1.5em;
+                }
+            }
+            
+            p {
+                font-size: .75em;
+                margin: 0 0 .25em;
+                position: relative;
+                
+                @media only screen and (min-width: $bp-mobile) {
                     font-size: 1em;
+                }
+                
+                .text-right {
+                    position: absolute;
+                    left: 4em;
                 }
             }
         }
