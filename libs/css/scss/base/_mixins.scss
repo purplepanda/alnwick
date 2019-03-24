@@ -1,0 +1,61 @@
+@mixin box-sizing($param) {
+    -moz-box-sizing: $param;
+    -ms-box-sizing: $param;
+    -webkit-box-sizing: $param;
+    box-sizing: $param;
+}
+
+@mixin translateY($translateY, $top: 50%) {
+    position: absolute;
+    top: $top;
+    -webkit-transform: perspective(1px) translateY($translateY);
+    -moz-transform: perspective(1px) translateY($translateY);
+    -ms-transform: perspective(1px) translateY($translateY);
+    transform: perspective(1px) translateY($translateY);
+}
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+// Scale transition
+.scale-transition {
+  &.scale-out {
+    transform: scale(0);
+    transition: transform .2s !important;
+  }
+
+  &.scale-in {
+    transform: scale(1);
+  }
+
+  transition: transform .3s cubic-bezier(0.53, 0.01, 0.36, 1.63) !important;
+}

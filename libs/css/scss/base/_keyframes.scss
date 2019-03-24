@@ -1,0 +1,21 @@
+@include keyframes(move-the-left-object) {
+    0%   { left: -100%; }
+    2.5% { left: -50%; }
+    5%   { left: -30%; }
+    10%  { left: 0; }
+    75%  { left: 0; }
+    92.5%{ left: -50%; }
+    95%  { left: -70%; }
+    100% { left: -100%; }
+}
+
+@include keyframes(move-the-right-object) {
+    0%   { right: -100%; }
+    2.5% { right: -50%; }
+    5%   { right: -30%; }
+    10%  { right: 0; }
+    75%  { right: 0; }
+    92.5%{ right: -50%; }
+    95%  { right: -70%; }
+    100% { right: -100%; }
+}

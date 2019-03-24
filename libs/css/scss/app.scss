@@ -1,0 +1,19 @@
+///// Global Imports /////
+@import 'base/reset';
+@import 'base/normalize';
+@import 'base/variables';
+@import 'base/mixins';
+@import 'base/keyframes';
+@import 'base/fonts';
+@import 'base/jQueryModal';
+@import 'base/slick';
+@import 'base/elements';
+
+
+///// Layout Imports /////
+@import 'layout/contact';
+@import 'layout/featured-tiles';
+@import 'layout/footer';
+@import 'layout/main';
+@import 'layout/nav';
+@import 'layout/projects';

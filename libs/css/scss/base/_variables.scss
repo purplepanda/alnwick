@@ -1,0 +1,29 @@
+/* Color Variables */
+$black:         #000000;
+$greyDarker:    #1A1A1A;
+$greyDark:      #444444;
+$grey:          #B3B3B3;
+$greyLight:     #DCDCDC;
+$white:         #FFFFFF;
+$blue:          #094872;
+
+$white50:       rgba(255,255,255,.5);
+$white80:       rgba(255,255,255,.8);
+$greyDarker50:  rgba(26,26,26,.5);
+$greyDarker75:  rgba(26,26,26,.75);
+
+
+// Media Query Ranges
+$bp-xsmall: 480px;
+$bp-mobile: 768px;
+$bp-tablet: 992px;
+$bp-desktop: 1200px;
+$bp-xlarge: 1600px;
+
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;
+$xlarge-screen: 1600px !default;

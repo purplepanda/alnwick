@@ -1,0 +1,78 @@
+.project {
+    border-radius: 1px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.25);
+    -moz-box-shadow:    0px 2px 5px 1px rgba(0,0,0,0.25);
+    -ms-box-shadow:     0px 2px 5px 1px rgba(0,0,0,0.25);
+    box-shadow:         0px 2px 5px 1px rgba(0,0,0,0.25);
+    margin-bottom: 5%;
+    
+    @media only screen and (min-width: $bp-tablet) {
+        display: flex;
+        align-items: center;
+    }
+
+    &__image {
+        position: relative;
+        transition: all .5s cubic-bezier(0.53, 0.01, 0.36, 1.63);
+
+        @media only screen and (min-width: $bp-tablet) {
+            width: 40%;
+        }
+        
+        &:before {
+            content: "";
+            @include translateY(-50%, 50%);
+            left: 0;
+            right: 0;
+            color: $white;
+            background-color: transparent;
+            text-align: center;
+            font-family: $fontFontAwesome;
+            font-size: 50px;            
+        }
+        
+        &:hover, &:focus {
+            &:before {
+                content: "\f04b";
+            }
+        }
+    }
+    &__info {
+        padding: 1.5em;
+        
+        @media only screen and (min-width: $bp-tablet) {
+            width: 60%;
+        }
+    }
+
+    &__info-title {
+        font-size: 1em;
+        text-align: left;
+        margin: 0 0 .25em;
+        
+        @media only screen and (min-width: $bp-xsmall) {
+            font-size: 1.25em;
+        }
+        @media only screen and (min-width: $bp-mobile) {
+            font-size: 1.5em;
+        }
+    }
+
+    &__info-location {
+        font-size: .7em;
+        font-style: italic;
+        
+        @media only screen and (min-width: $bp-xsmall) {
+            font-size: .9em;
+        }
+    }
+
+    &__info-description {
+        font-size: .8em;
+        
+        @media only screen and (min-width: $bp-xsmall) {
+            font-size: 1em;
+        }
+    }
+}

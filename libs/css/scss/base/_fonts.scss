@@ -1,0 +1,43 @@
+// fonts
+@mixin font-face($family, $file) {
+     @font-face{
+        font-family: $family;
+        src: url('#{$file}.eot');
+        src: url('#{$file}.eot?#iefix') format('embedded-opentype'),
+             url('#{$file}.woff') format('woff'),
+             url('#{$file}.ttf') format('truetype'),
+             url('#{$file}.otf') format('opentype');
+    }
+}
+@mixin font-face-simple($family, $file) {
+     @font-face{
+        font-family: $family;
+        src: url('#{$file}.ttf') format('truetype');
+    }
+}
+
+@include font-face(FontAwesome, 'fonts/FontAwesome/FontAwesome');
+@include font-face(Lato-Thin, 'fonts/Lato/Lato-Thin');
+@include font-face(Lato-Light, 'fonts/Lato/Lato-Light');
+@include font-face(Lato-Regular, 'fonts/Lato/Lato-Regular');
+@include font-face(Lato-Medium, 'fonts/Lato/Lato-Medium');
+@include font-face(Lato-Semibold, 'fonts/Lato/Lato-Semibold');
+@include font-face(Lato-Bold, 'fonts/Lato/Lato-Bold');
+@include font-face-simple(EBGaramond-Regular, 'fonts/EB_Garamond/EBGaramond-Regular');
+@include font-face-simple(EBGaramond-Medium, 'fonts/EB_Garamond/EBGaramond-Medium');
+@include font-face-simple(EBGaramond-SemiBold, 'fonts/EB_Garamond/EBGaramond-SemiBold');
+@include font-face-simple(EBGaramond-Bold, 'fonts/EB_Garamond/EBGaramond-Bold');
+@include font-face-simple(EBGaramond-ExtraBold, 'fonts/EB_Garamond/EBGaramond-ExtraBold');
+
+$fontFontAwesome: "FontAwesome";
+$fontLatoThin: "Lato-Thin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontLatoLight: "Lato-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontLatoRegular: "Lato-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontLatoMedium: "Lato-Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontLatoSemibold: "Lato-Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontLatoBold: "Lato-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fontEBGaramondRegular: "EBGaramond-Regular", Georgia, serif;
+$fontEBGaramondMedium: "EBGaramond-Medium", Georgia, serif;
+$fontEBGaramondSemiBold: "EBGaramond-SemiBold", Georgia, serif;
+$fontEBGaramondBold: "EBGaramond-Bold", Georgia, serif;
+$fontEBGaramondExtraBold: "EBGaramond-ExtraBold", Georgia, serif;
