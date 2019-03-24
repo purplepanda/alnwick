@@ -1499,6 +1499,37 @@ main {
     text-decoration: none;
     outline: 0; }
 
+.intro-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 1em; }
+  @media only screen and (min-width: 480px) {
+    .intro-nav {
+      flex-direction: row;
+      padding-top: 2em; } }
+  .intro-nav li {
+    position: relative;
+    margin: 0 1em;
+    color: #B3B3B3;
+    text-align: center;
+    line-height: 2.5; }
+    .intro-nav li a {
+      font-family: "EBGaramond-Bold", Georgia, serif;
+      border-bottom: 2px solid transparent;
+      text-transform: uppercase;
+      color: #B3B3B3;
+      letter-spacing: .2em;
+      transition: all 0.3s cubic-bezier(0.53, 0.01, 0.36, 1.63); }
+      .intro-nav li a:hover, .intro-nav li a:focus {
+        color: #444444;
+        border-bottom: 2px solid #444444; }
+  @media only screen and (min-width: 480px) {
+    .intro-nav li:not(:first-of-type):before {
+      content: "|";
+      position: absolute;
+      left: -1em; } }
+
 .project {
   border-radius: 1px;
   overflow: hidden;

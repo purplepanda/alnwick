@@ -191,3 +191,47 @@
         }
     }
 }
+
+.intro-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 1em;
+    
+    @media only screen and (min-width: $bp-xsmall) {
+        flex-direction: row;
+        padding-top: 2em;
+    }
+    
+    li {
+        position: relative;
+        margin: 0 1em;
+        color: $grey;
+        text-align: center;
+        line-height: 2.5;
+        
+        a {
+            font-family: $fontEBGaramondBold;
+            border-bottom: 2px solid transparent;
+            text-transform: uppercase;
+            color: $grey;
+            letter-spacing: .2em;
+            transition: all .3s cubic-bezier(0.53, 0.01, 0.36, 1.63);
+
+            &:hover, &:focus {
+                color: $greyDark;
+                border-bottom: 2px solid $greyDark;
+            }
+        }
+    }
+    
+    li:not(:first-of-type) {
+        @media only screen and (min-width: $bp-xsmall) {
+            &:before {
+                content: "|";
+                position: absolute;
+                left: -1em;
+            }
+        }
+    }
+}
