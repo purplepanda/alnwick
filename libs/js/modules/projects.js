@@ -1,4 +1,6 @@
-$(document).ready(function() {    
+$(document).ready(function() {
+  if ($('.projects-filter').length > 0) {
+    var selectedFilters = [];
     var projectData = [{
             id: 0,
             title: "The Crown Jewels Exhibition",
@@ -21,7 +23,7 @@ $(document).ready(function() {
                 imgSrc: "/libs/img/projects/01CCC.jpg", 
                 altText: "HM Tower of London. Preparing for Royal opening"     
             }], 
-            type: "cultural-institutional"
+            type: "institutional"
         }, {
             id: 1,
             title: "Ardsley Country Club",
@@ -96,7 +98,7 @@ $(document).ready(function() {
                 imgSrc: "/libs/img/projects/04DD.jpg", 
                 altText: "Museum of Modern Art Garden"     
             }],   
-            type: "cultural-institutional"
+            type: "institutional"
         }, {
             id: 4,
             title: "The Joseph Bruno Trust",
@@ -147,7 +149,7 @@ $(document).ready(function() {
                 imgSrc: "/libs/img/projects/07C.jpg", 
                 altText: "World Trade Center Memorial Museum - the intent"     
             }], 
-            type: "cultural-institutional"
+            type: "institutional"
         }, {
             id: 7,
             title: "100 11th Avenue",
@@ -207,7 +209,7 @@ $(document).ready(function() {
                 imgSrc: "/libs/img/projects/10AA.jpg", 
                 altText: "Cadman Plaza General Post Office"     
             }], 
-            type: "cultural-institutional"
+            type: "institutional"
         }, {
             id: 10,
             title: "Rego Park",
@@ -272,7 +274,7 @@ $(document).ready(function() {
                 imgSrc: "/libs/img/projects/15BB.jpg", 
                 altText: "High School for Law, Queens, New York"     
             }], 
-            type: "cultural-institutional"
+            type: "institutional"
         }, {
             id: 14,
             title: "Battery Park City Authority, Pier 'A'",
@@ -306,7 +308,7 @@ $(document).ready(function() {
                 imgSrc: "/libs/img/projects/17B.jpg", 
                 altText: "Tren Urbano, San Juan, Puerto Rico"     
             }], 
-            type: "cultural-institutional"
+            type: "institutional"
         }, {
             id: 16,
             title: "Coney Island Commons",
@@ -323,9 +325,23 @@ $(document).ready(function() {
             type: "disaster-recovery"
         }, {
             id: 17,
+            title: "Paley Center",
+            location: "New York, New York",
+            description: "In construction at the time of the storm, this project suffered the full effects of Sandy's might. Its claim was settled promptly.", 
+            thumb: {
+                src: "/libs/img/projects/19thumb.jpg",
+                alt: "Paley Center, New York, New York, Careful neighbors."
+            },
+            images: [{
+                imgSrc: "/libs/img/projects/19B.jpg", 
+                altText: "Paley Center, New York, New York, Careful neighbors."
+            }], 
+            type: "commercial-residential"
+        }, {
+            id: 18,
             title: "Canal Street",
             location: "New York, New York",
-            description: "Freezing during cold winters can have really damaging effects.",
+            description: "Big projects on the neighboring Lot, must not forget the needs of occupants already in place. Having good professional support, to keep them honest to their promises, is important.",
             thumb: {
                 src: "/libs/img/projects/20thumb.jpg",
                 alt: "Frozen sprinkler pipe flooding, Canal Street, New York, New York"
@@ -339,8 +355,24 @@ $(document).ready(function() {
     ];
 
 
-    function createProjectTiles(data) {
-        $(data).each(function(idx, item) {
+    function createProjectTiles(data, filters) {
+        $('.projects > div').remove();
+        
+        var projects = [];
+        
+        if (filters == "") {
+            $(data).each(function(idx, item) { projects.push(item); });
+        } else {
+            $(data).each(function(idx, item) {
+                var category = item.type;
+                
+                if (filters.indexOf(category) !== -1) {
+                    projects.push(item);
+                }
+            });
+        }
+        
+        $(projects).each(function(idx, item) {
 
             var images = item.images,
                 carouselDiv = $("<div/>", { "class" : "project__carousel-wrapper" });
@@ -376,20 +408,70 @@ $(document).ready(function() {
             infoDiv.append(location).append(description);
             projectTile.append(imageDiv).append(modalDiv).append(infoDiv);
 
-            $('.projects').append(projectTile); 
+            $('.projects').append(projectTile);
         });
+        
+        $("a[href*='#img']").on("click", function () {
+            var carousel = $(this).parent('.project').find('.project__carousel-wrapper');
+
+            carousel.slick({
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+            });
+        }); 
     }
-
-    createProjectTiles(projectData);
     
-    $("a[href*='#img']").on("click", function () {
-        var carousel = $(this).parent('.project').find('.project__carousel-wrapper');
+    function applyFilters() {
+        var filters = $('.ms-drop li');
 
-        carousel.slick({
-            dots: true,
-            infinite: true,
-            speed: 300,
-            slidesToShow: 1,
+        filters.each(function (idx, item) {
+            if($(item).hasClass('selected')) {
+                var filterCategory = $(item).find('input').prop('value');
+
+                if (selectedFilters.indexOf(filterCategory) === -1) {
+                    selectedFilters.push(filterCategory); 
+                }
+            } else {
+                var filterCategory = $(item).find('input').prop('value');
+
+                if (selectedFilters.indexOf(filterCategory) !== -1) {
+                    var index = selectedFilters.indexOf(filterCategory);
+                    selectedFilters.splice(index, 1); 
+                }
+            }
+        });
+
+        createProjectTiles(projectData, selectedFilters);
+    }
+    
+    function setFilterMenu() {
+        var filterSelect = $('.ms-parent');
+        
+        if ( $(window).scrollTop() - 5 > filterSelect.position().top && !filterSelect.hasClass('fixed-filter') ) {
+            filterSelect.addClass('fixed-filter');  
+        } else if ( $(window).scrollTop() - 5 <= filterSelect.position().top && filterSelect.hasClass('fixed-filter') ) {
+            filterSelect.removeClass('fixed-filter');
+        }
+    }
+    
+    $(function () {
+        $('select').multipleSelect({
+            filter: true,
+            placeholder: "Filter By Type",
+            width: "100%",
+            onOpen: function () {},
+            onClose: function () {
+                applyFilters();
+                $('html, body').animate({scrollTop: 0}, 500);
+            }
         });
     });
+    
+    $(window).on('scroll', function () {
+        setFilterMenu();
+    });
+    createProjectTiles(projectData, selectedFilters);
+  }
 });

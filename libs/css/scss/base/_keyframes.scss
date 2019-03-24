@@ -19,3 +19,8 @@
     95%  { right: -70%; }
     100% { right: -100%; }
 }
+
+@include keyframes(fade-in) {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
