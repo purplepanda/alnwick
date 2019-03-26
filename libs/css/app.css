@@ -985,6 +985,9 @@ template {
   position: relative;
   vertical-align: middle;
   transition: all .3s ease; }
+  @media only screen and (min-width: 1200px) {
+    .ms-parent {
+      width: 1000px !important; } }
   .ms-parent.fixed-filter {
     position: fixed;
     left: 5%;
@@ -994,8 +997,16 @@ template {
     z-index: 20; }
     @media only screen and (min-width: 768px) {
       .ms-parent.fixed-filter {
-        max-width: 1000px;
         margin: 0 auto; } }
+    @media only screen and (min-width: 992px) {
+      .ms-parent.fixed-filter {
+        left: calc((50vw - 500px) + 5%);
+        right: calc((50vw - 500px) + 5%); } }
+    @media only screen and (min-width: 1200px) {
+      .ms-parent.fixed-filter {
+        width: 1000px !important;
+        left: calc(50vw - 500px);
+        right: calc(50vw - 500px); } }
 
 .ms-choice {
   display: block;
@@ -1554,7 +1565,11 @@ footer {
       padding: 25px 7px 7px;
       color: #444444; }
       .form .form__group input:focus {
-        outline: 1px solid #094872; }
+        outline: 0;
+        -webkit-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25);
+        -ms-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25); }
     .form .form__group textarea {
       width: 100%;
       height: 150px;
@@ -1563,7 +1578,11 @@ footer {
       background-color: #FFFFFF;
       padding: 25px 7px 7px; }
       .form .form__group textarea:focus {
-        outline: 1px solid #094872; }
+        outline: 0;
+        -webkit-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25);
+        -ms-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25); }
     .form .form__group.btn-submit {
       text-align: center; }
       .form .form__group.btn-submit input {
@@ -1579,7 +1598,12 @@ footer {
         transition: all .3s ease; }
         .form .form__group.btn-submit input:hover, .form .form__group.btn-submit input:focus {
           outline: 0;
-          background-color: #094872; }
+          border: 1px solid #094872;
+          background-color: #094872;
+          -webkit-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25);
+          -moz-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25);
+          -ms-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25); }
 
 main {
   max-width: 1000px;
