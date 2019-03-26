@@ -41,6 +41,6 @@ $('a').on('click', function(e) {
         var topOfElem = $(link.substr(hashIndex)).offset().top;
         
         $('html, body').animate({scrollTop: topOfElem - 16}, 750);
-        closeAllMenus()
+        closeAllMenus();
     }
 });
