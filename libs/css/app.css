@@ -659,11 +659,6 @@ template {
   src: url("fonts/FontAwesome/FontAwesome.eot?#iefix") format("embedded-opentype"), url("fonts/FontAwesome/FontAwesome.woff") format("woff"), url("fonts/FontAwesome/FontAwesome.ttf") format("truetype"), url("fonts/FontAwesome/FontAwesome.otf") format("opentype"); }
 
 @font-face {
-  font-family: Lato-Thin;
-  src: url("fonts/Lato/Lato-Thin.eot");
-  src: url("fonts/Lato/Lato-Thin.eot?#iefix") format("embedded-opentype"), url("fonts/Lato/Lato-Thin.woff") format("woff"), url("fonts/Lato/Lato-Thin.ttf") format("truetype"), url("fonts/Lato/Lato-Thin.otf") format("opentype"); }
-
-@font-face {
   font-family: Lato-Light;
   src: url("fonts/Lato/Lato-Light.eot");
   src: url("fonts/Lato/Lato-Light.eot?#iefix") format("embedded-opentype"), url("fonts/Lato/Lato-Light.woff") format("woff"), url("fonts/Lato/Lato-Light.ttf") format("truetype"), url("fonts/Lato/Lato-Light.otf") format("opentype"); }
@@ -679,34 +674,13 @@ template {
   src: url("fonts/Lato/Lato-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/Lato/Lato-Medium.woff") format("woff"), url("fonts/Lato/Lato-Medium.ttf") format("truetype"), url("fonts/Lato/Lato-Medium.otf") format("opentype"); }
 
 @font-face {
-  font-family: Lato-Semibold;
-  src: url("fonts/Lato/Lato-Semibold.eot");
-  src: url("fonts/Lato/Lato-Semibold.eot?#iefix") format("embedded-opentype"), url("fonts/Lato/Lato-Semibold.woff") format("woff"), url("fonts/Lato/Lato-Semibold.ttf") format("truetype"), url("fonts/Lato/Lato-Semibold.otf") format("opentype"); }
-
-@font-face {
   font-family: Lato-Bold;
   src: url("fonts/Lato/Lato-Bold.eot");
   src: url("fonts/Lato/Lato-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/Lato/Lato-Bold.woff") format("woff"), url("fonts/Lato/Lato-Bold.ttf") format("truetype"), url("fonts/Lato/Lato-Bold.otf") format("opentype"); }
 
 @font-face {
-  font-family: EBGaramond-Regular;
-  src: url("fonts/EB_Garamond/EBGaramond-Regular.ttf") format("truetype"); }
-
-@font-face {
   font-family: EBGaramond-Medium;
   src: url("fonts/EB_Garamond/EBGaramond-Medium.ttf") format("truetype"); }
-
-@font-face {
-  font-family: EBGaramond-SemiBold;
-  src: url("fonts/EB_Garamond/EBGaramond-SemiBold.ttf") format("truetype"); }
-
-@font-face {
-  font-family: EBGaramond-Bold;
-  src: url("fonts/EB_Garamond/EBGaramond-Bold.ttf") format("truetype"); }
-
-@font-face {
-  font-family: EBGaramond-ExtraBold;
-  src: url("fonts/EB_Garamond/EBGaramond-ExtraBold.ttf") format("truetype"); }
 
 .blocker {
   position: fixed;
@@ -756,7 +730,7 @@ template {
   text-align: left; }
 
 .modal a.close-modal {
-  font-family: "Lato-Semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   position: absolute;
   top: 0;
   right: 0;
@@ -1195,7 +1169,7 @@ h2 {
 h3,
 h4,
 h6 {
-  font-family: "EBGaramond-Regular", Georgia, serif;
+  font-family: "EBGaramond-Medium", Georgia, serif;
   letter-spacing: .025em;
   margin: 0 0 .5em; }
 
@@ -1428,16 +1402,16 @@ blockquote {
     width: 101%;
     position: absolute;
     top: auto;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     right: 0;
     color: #1A1A1A;
     background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
     background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
-    padding: 3em 1em .5em; }
+    padding: 5em 1em .5em; }
   .tile__title {
-    font-family: "EBGaramond-Bold", Georgia, serif;
+    font-family: "EBGaramond-Medium", Georgia, serif;
     margin: 0 0 .25em; }
   .tile__location {
     font-family: "Lato-Medium", "Helvetica Neue", Helvetica, Arial, sans-serif;
