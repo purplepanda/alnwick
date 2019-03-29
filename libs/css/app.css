@@ -1755,6 +1755,17 @@ main {
   -o-animation: fade-in 2.5s ease;
   animation: fade-in 2.5s ease; }
 
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .projects {
+    display: flex;
+    flex-wrap: wrap; }
+    .projects .project {
+      width: 49%; }
+      .projects .project:nth-of-type(odd) {
+        margin: 0 1% 2% 0; }
+      .projects .project:nth-of-type(even) {
+        margin: 0 0 2% 1%; } }
+
 .project {
   border-radius: 1px;
   overflow: hidden;
