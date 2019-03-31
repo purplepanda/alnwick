@@ -1,6 +1,5 @@
 $(document).ready(function() {
     if ($('div[class*="anim"]').length > 0) {
-        console.log('run animations');
         var animateElements = function () {
                 var $animElems = $('div[class*="anim"]'),
                     addAnimationClass = function () {
@@ -23,4 +22,20 @@ $(document).ready(function() {
         
         $(window).on('load', animateElements());
     }
+    
+    var scrollToTop = setInterval(watchTriangle, 200);
+    
+    var watchTriangle = function() {
+        if ($('.triangle').hasClass('active') && $(window).scrollTop() < 600) {
+            var topOfTriangle = $('.triangle').position().top;
+            
+            $('html, body').animate({ scrollTop: topOfTriangle - 20 }, 1500);
+        }
+        
+        clearInterval(scrollToTop);
+    };
+
+    setTimeout(function() {
+        watchTriangle();
+    }, 7500);
 });
