@@ -1097,9 +1097,10 @@ template {
     content: "\f106"; }
 
 .ms-drop {
-  width: 100%;
+  width: calc(100% + 2px);
   overflow: hidden;
   display: none;
+  margin-left: -1px;
   margin-top: 1px;
   padding: 10px;
   position: absolute;
@@ -1408,11 +1409,7 @@ blockquote {
 
 #contact {
   padding: 0;
-  max-width: none;
-  background-image: url(../../../../libs/img/featured-canary-wharf.jpg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat; }
+  max-width: none; }
   #contact > div {
     padding: 100px 5% 50px;
     max-width: 1200px;
@@ -1848,17 +1845,6 @@ main {
   -o-animation: fade-in 2.5s ease;
   animation: fade-in 2.5s ease; }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .projects {
-    display: flex;
-    flex-wrap: wrap; }
-    .projects .project {
-      width: 49%; }
-      .projects .project:nth-of-type(odd) {
-        margin: 0 1% 2% 0; }
-      .projects .project:nth-of-type(even) {
-        margin: 0 0 2% 1%; } }
-
 .project {
   border-radius: 1px;
   overflow: hidden;
@@ -1871,13 +1857,16 @@ main {
   -o-animation: fade-in 2s ease;
   animation: fade-in 2s ease;
   margin-bottom: 5%; }
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 768px) {
     .project {
       display: flex;
       align-items: center; } }
   .project__image {
     position: relative;
     transition: all 0.5s cubic-bezier(0.53, 0.01, 0.36, 1.63); }
+    @media only screen and (min-width: 768px) {
+      .project__image {
+        width: 50%; } }
     @media only screen and (min-width: 992px) {
       .project__image {
         width: 40%; } }
@@ -1900,9 +1889,14 @@ main {
       content: "\f04b"; }
   .project__info {
     padding: 1.5em; }
+    @media only screen and (min-width: 768px) {
+      .project__info {
+        width: 50%;
+        padding: 1em 1.5em; } }
     @media only screen and (min-width: 992px) {
       .project__info {
-        width: 60%; } }
+        width: 60%;
+        padding: 1.5em; } }
   .project__info-title {
     font-size: 1em;
     text-align: left;
@@ -1910,7 +1904,7 @@ main {
     @media only screen and (min-width: 480px) {
       .project__info-title {
         font-size: 1.25em; } }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 992px) {
       .project__info-title {
         font-size: 1.5em; } }
   .project__info-location {
@@ -1924,6 +1918,14 @@ main {
     @media only screen and (min-width: 480px) {
       .project__info-description {
         font-size: 1em; } }
+    @media only screen and (min-width: 768px) {
+      .project__info-description {
+        font-size: .8em;
+        margin: 0; } }
+    @media only screen and (min-width: 992px) {
+      .project__info-description {
+        font-size: 1em;
+        margin: 0 0 1.5em; } }
 
 #services section {
   margin-bottom: 1em; }
@@ -1939,11 +1941,12 @@ main {
       margin: 0 0 1em 2.5em; } }
 
 #services .pullquote {
-  border-left: 5px solid #31859c;
-  border-right: 5px solid #31859c;
+  border-left: 5px solid #003149;
+  border-right: 5px solid #003149;
   padding: 0 1.5em;
   margin: 1.5em 10%;
-  line-height: 1.5; }
+  line-height: 1.5;
+  color: #003149; }
   @media only screen and (min-width: 480px) {
     #services .pullquote {
       font-size: 1.25em; } }

@@ -112,9 +112,10 @@
 }
 
 .ms-drop {
-    width: 100%;
+    width: calc(100% + 2px);
     overflow: hidden;
     display: none;
+    margin-left: -1px;
     margin-top: 1px;
     padding: 10px;
     position: absolute;
