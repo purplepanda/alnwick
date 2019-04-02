@@ -17,12 +17,12 @@
     }
     
     .pullquote {
-        border-left: 5px solid $blueDark;
-        border-right: 5px solid $blueDark;
+        border-left: 5px solid $rust;
+        border-right: 5px solid $rust;
         padding: 0 1.5em;
         margin: 1.5em 10%;
         line-height: 1.5;
-        color: $blueDark;
+        color: $greyDarker;
         
         @media only screen and (min-width: $bp-xsmall) {
             font-size: 1.25em;
