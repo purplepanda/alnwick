@@ -22,7 +22,7 @@
         input {
             width: 100%;
             height: 50px;
-            border: 1px solid $greyDark;
+            border: 1px solid $greyLight;
             border-radius: 1px;
             background-color: $white;
             padding: 25px 7px 7px;
@@ -30,27 +30,27 @@
             
             &:focus {
                 outline: 0;
-                -webkit-box-shadow: 0px 1px 5px 1px $blue50;
-                -moz-box-shadow:    0px 1px 5px 1px $blue50;
-                -ms-box-shadow:     0px 1px 5px 1px $blue50;
-                box-shadow:         0px 1px 5px 1px $blue50;
+                -webkit-box-shadow: 0px 1px 5px 1px $greyDarker50;
+                -moz-box-shadow:    0px 1px 5px 1px $greyDarker50;
+                -ms-box-shadow:     0px 1px 5px 1px $greyDarker50;
+                box-shadow:         0px 1px 5px 1px $greyDarker50;
             }
         }
         
         textarea {
             width: 100%;
             height: 150px;
-            border: 1px solid $greyDark;
+            border: 1px solid $greyLight;
             border-radius: 1px;
             background-color: $white;
             padding: 25px 7px 7px;
             
             &:focus {
                 outline: 0;
-                -webkit-box-shadow: 0px 1px 5px 1px $blue50;
-                -moz-box-shadow:    0px 1px 5px 1px $blue50;
-                -ms-box-shadow:     0px 1px 5px 1px $blue50;
-                box-shadow:         0px 1px 5px 1px $blue50;
+                -webkit-box-shadow: 0px 1px 5px 1px $greyDarker50;
+                -moz-box-shadow:    0px 1px 5px 1px $greyDarker50;
+                -ms-box-shadow:     0px 1px 5px 1px $greyDarker50;
+                box-shadow:         0px 1px 5px 1px $greyDarker50;
             }
         }
         
@@ -63,8 +63,8 @@
                 padding: 10px 50px;
                 font-family: $fontLatoLight;
                 color: $white;
-                background-color: $blue;
-                border: 1px solid $blue;
+                background-color: $blueDark;
+                border: 1px solid $blueDark;
                 text-transform: uppercase;
                 letter-spacing: .05em;
                 border-radius: 1px;
@@ -74,10 +74,6 @@
                     outline: 0;
                     border: 1px solid $rust;
                     background-color: $rust;
-                    -webkit-box-shadow: 0px 1px 5px 1px $rust50;
-                    -moz-box-shadow:    0px 1px 5px 1px $rust50;
-                    -ms-box-shadow:     0px 1px 5px 1px $rust50;
-                    box-shadow:         0px 1px 5px 1px $rust50;
                 }
             }
         }

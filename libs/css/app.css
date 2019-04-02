@@ -1408,70 +1408,70 @@ blockquote {
   padding: 0 !important; }
 
 #contact {
-  padding: 0;
-  max-width: none; }
-  #contact > div {
-    padding: 100px 5% 50px;
-    max-width: 1200px;
-    margin: 0 auto; }
-    @media only screen and (min-width: 768px) {
-      #contact > div {
-        padding: 150px 5% 50px; } }
-  #contact section {
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 10% 1em;
-    border-radius: 1px;
-    -webkit-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
-    -ms-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.5); }
-    @media only screen and (min-width: 480px) {
-      #contact section {
-        padding: 10%; } }
+  max-width: 1100px; }
+  @media only screen and (min-width: 992px) {
+    #contact section {
+      display: flex;
+      justify-content: space-between; } }
+  #contact section .divider {
+    background-color: #444444;
+    margin: 2em 20% 4em; }
     @media only screen and (min-width: 992px) {
-      #contact section {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10% 2.5%; } }
-    #contact section .divider {
-      background-color: #444444;
-      margin: 10% 20%; }
-      @media only screen and (min-width: 992px) {
-        #contact section .divider {
-          display: none; } }
-    #contact section article {
-      padding-bottom: 1em; }
-      @media only screen and (min-width: 992px) {
-        #contact section article {
-          width: 47.5%; } }
-      #contact section article .contact-info {
-        max-width: 250px;
+      #contact section .divider {
+        display: none; } }
+  #contact section #contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10% 1.5em;
+    border-radius: 1px;
+    border: 1px solid #DCDCDC;
+    -webkit-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25);
+    -ms-box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.25); }
+    @media only screen and (min-width: 992px) {
+      #contact section #contact-form {
+        padding: 3em 1.5em;
+        max-width: 400px; } }
+  #contact section article {
+    padding-bottom: 1em; }
+    @media only screen and (min-width: 992px) {
+      #contact section article {
+        width: 60%;
+        padding: 3em 0; } }
+    #contact section article .contact-info {
+      max-width: 250px;
+      margin: 0 auto; }
+      @media only screen and (min-width: 768px) {
+        #contact section article .contact-info {
+          max-width: 330px; } }
+    #contact section article .castle {
+      text-align: center;
+      padding-top: 3em; }
+      #contact section article .castle img {
+        max-width: 300px;
         margin: 0 auto; }
-        @media only screen and (min-width: 768px) {
-          #contact section article .contact-info {
-            max-width: 330px; } }
-      #contact section article h2, #contact section article h5 {
-        text-align: center; }
-      #contact section article h5 {
-        font-family: "Lato-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        margin: 0 0 2em; }
-      #contact section article h2 {
-        font-size: 1.25em;
-        margin: 0 0 .5em; }
-        @media only screen and (min-width: 768px) {
-          #contact section article h2 {
-            font-size: 1.5em; } }
-      #contact section article p {
-        font-size: .75em;
-        margin: 0 0 .25em;
-        position: relative; }
-        @media only screen and (min-width: 768px) {
-          #contact section article p {
-            font-size: 1em; } }
-        #contact section article p .text-right {
-          position: absolute;
-          left: 4em; }
+    #contact section article h2, #contact section article h5 {
+      text-align: center; }
+    #contact section article h5 {
+      font-family: "Lato-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      margin: 0 0 2em; }
+    #contact section article h2 {
+      font-size: 1.25em;
+      margin: 0 0 .5em; }
+      @media only screen and (min-width: 768px) {
+        #contact section article h2 {
+          font-size: 1.5em; } }
+    #contact section article p {
+      font-size: .75em;
+      margin: 0 0 .25em;
+      position: relative; }
+      @media only screen and (min-width: 768px) {
+        #contact section article p {
+          font-size: 1em; } }
+      #contact section article p .text-right {
+        position: absolute;
+        left: 4em; }
 
 #featured > div {
   display: flex;
@@ -1594,30 +1594,30 @@ footer {
     .form .form__group input {
       width: 100%;
       height: 50px;
-      border: 1px solid #444444;
+      border: 1px solid #DCDCDC;
       border-radius: 1px;
       background-color: #FFFFFF;
       padding: 25px 7px 7px;
       color: #444444; }
       .form .form__group input:focus {
         outline: 0;
-        -webkit-box-shadow: 0px 1px 5px 1px rgba(49, 133, 156, 0.5);
-        -moz-box-shadow: 0px 1px 5px 1px rgba(49, 133, 156, 0.5);
-        -ms-box-shadow: 0px 1px 5px 1px rgba(49, 133, 156, 0.5);
-        box-shadow: 0px 1px 5px 1px rgba(49, 133, 156, 0.5); }
+        -webkit-box-shadow: 0px 1px 5px 1px rgba(26, 26, 26, 0.5);
+        -moz-box-shadow: 0px 1px 5px 1px rgba(26, 26, 26, 0.5);
+        -ms-box-shadow: 0px 1px 5px 1px rgba(26, 26, 26, 0.5);
+        box-shadow: 0px 1px 5px 1px rgba(26, 26, 26, 0.5); }
     .form .form__group textarea {
       width: 100%;
       height: 150px;
-      border: 1px solid #444444;
+      border: 1px solid #DCDCDC;
       border-radius: 1px;
       background-color: #FFFFFF;
       padding: 25px 7px 7px; }
       .form .form__group textarea:focus {
         outline: 0;
-        -webkit-box-shadow: 0px 1px 5px 1px rgba(49, 133, 156, 0.5);
-        -moz-box-shadow: 0px 1px 5px 1px rgba(49, 133, 156, 0.5);
-        -ms-box-shadow: 0px 1px 5px 1px rgba(49, 133, 156, 0.5);
-        box-shadow: 0px 1px 5px 1px rgba(49, 133, 156, 0.5); }
+        -webkit-box-shadow: 0px 1px 5px 1px rgba(26, 26, 26, 0.5);
+        -moz-box-shadow: 0px 1px 5px 1px rgba(26, 26, 26, 0.5);
+        -ms-box-shadow: 0px 1px 5px 1px rgba(26, 26, 26, 0.5);
+        box-shadow: 0px 1px 5px 1px rgba(26, 26, 26, 0.5); }
     .form .form__group.btn-submit {
       text-align: center; }
       .form .form__group.btn-submit input {
@@ -1626,8 +1626,8 @@ footer {
         padding: 10px 50px;
         font-family: "Lato-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
         color: #FFFFFF;
-        background-color: #31859c;
-        border: 1px solid #31859c;
+        background-color: #003149;
+        border: 1px solid #003149;
         text-transform: uppercase;
         letter-spacing: .05em;
         border-radius: 1px;
@@ -1635,11 +1635,7 @@ footer {
         .form .form__group.btn-submit input:hover, .form .form__group.btn-submit input:focus {
           outline: 0;
           border: 1px solid #c00101;
-          background-color: #c00101;
-          -webkit-box-shadow: 0px 1px 5px 1px rgba(192, 1, 1, 0.5);
-          -moz-box-shadow: 0px 1px 5px 1px rgba(192, 1, 1, 0.5);
-          -ms-box-shadow: 0px 1px 5px 1px rgba(192, 1, 1, 0.5);
-          box-shadow: 0px 1px 5px 1px rgba(192, 1, 1, 0.5); }
+          background-color: #c00101; }
 
 main {
   max-width: 1000px;
