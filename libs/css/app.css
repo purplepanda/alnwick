@@ -541,6 +541,96 @@ template {
   100% {
     opacity: 1; } }
 
+@-webkit-keyframes fade-in5 {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0; }
+  21% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes fade-in5 {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0; }
+  21% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in5 {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0; }
+  21% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fade-in7 {
+  0% {
+    opacity: 0; }
+  40% {
+    opacity: 0; }
+  41% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes fade-in7 {
+  0% {
+    opacity: 0; }
+  40% {
+    opacity: 0; }
+  41% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in7 {
+  0% {
+    opacity: 0; }
+  40% {
+    opacity: 0; }
+  41% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes fade-in9 {
+  0% {
+    opacity: 0; }
+  60% {
+    opacity: 0; }
+  61% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes fade-in9 {
+  0% {
+    opacity: 0; }
+  60% {
+    opacity: 0; }
+  61% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in9 {
+  0% {
+    opacity: 0; }
+  60% {
+    opacity: 0; }
+  61% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+
 /*slide content up from bottom*/
 @-webkit-keyframes slide-up {
   0% {
@@ -607,9 +697,9 @@ template {
   -moz-transform: translateY(-100%);
   transform: translateY(-100%); }
   .anim-slide-up-01.active {
-    -webkit-animation: slide-up 1s cubic-bezier(0.15, 0.53, 0.7, 0.95) forwards 1s;
-    -moz-animation: slide-up 1s cubic-bezier(0.15, 0.53, 0.7, 0.95) forwards 1s;
-    animation: slide-up 1s cubic-bezier(0.15, 0.53, 0.7, 0.95) forwards 1s; }
+    -webkit-animation: slide-up 1s cubic-bezier(0.15, 0.53, 0.7, 0.95) forwards;
+    -moz-animation: slide-up 1s cubic-bezier(0.15, 0.53, 0.7, 0.95) forwards;
+    animation: slide-up 1s cubic-bezier(0.15, 0.53, 0.7, 0.95) forwards; }
 
 .anim-slide-up-02 {
   opacity: 0;
@@ -741,6 +831,27 @@ template {
     -webkit-animation: fade-in 0.25s cubic-bezier(0.15, 0.53, 0.7, 0.95) forwards 13s;
     -moz-animation: fade-in 0.25s cubic-bezier(0.15, 0.53, 0.7, 0.95) forwards 13s;
     animation: fade-in 0.25s cubic-bezier(0.15, 0.53, 0.7, 0.95) forwards 13s; }
+
+.anim-triangle-05 {
+  opacity: 0; }
+  .anim-triangle-05.active {
+    -webkit-animation: fade-in5 10s cubic-bezier(0.15, 0.53, 0.7, 0.95) infinite;
+    -moz-animation: fade-in5 10s cubic-bezier(0.15, 0.53, 0.7, 0.95) infinite;
+    animation: fade-in5 10s cubic-bezier(0.15, 0.53, 0.7, 0.95) infinite; }
+
+.anim-triangle-07 {
+  opacity: 0; }
+  .anim-triangle-07.active {
+    -webkit-animation: fade-in7 10s cubic-bezier(0.15, 0.53, 0.7, 0.95) infinite;
+    -moz-animation: fade-in7 10s cubic-bezier(0.15, 0.53, 0.7, 0.95) infinite;
+    animation: fade-in7 10s cubic-bezier(0.15, 0.53, 0.7, 0.95) infinite; }
+
+.anim-triangle-09 {
+  opacity: 0; }
+  .anim-triangle-09.active {
+    -webkit-animation: fade-in9 10s cubic-bezier(0.15, 0.53, 0.7, 0.95) infinite;
+    -moz-animation: fade-in9 10s cubic-bezier(0.15, 0.53, 0.7, 0.95) infinite;
+    animation: fade-in9 10s cubic-bezier(0.15, 0.53, 0.7, 0.95) infinite; }
 
 @font-face {
   font-family: FontAwesome;
@@ -1232,7 +1343,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #FFFFFF;
   -webkit-box-shadow: 0px -1px 10px 1px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px -1px 10px 1px rgba(0, 0, 0, 0.25);
   -ms-box-shadow: 0px -1px 10px 1px rgba(0, 0, 0, 0.25);
@@ -1357,6 +1468,12 @@ a {
   background-color: #DCDCDC;
   margin: 5% 20%; }
 
+.dividerB {
+  padding: 25vh; }
+  @media only screen and (min-width: 768px) {
+    .dividerB {
+      padding: 35vh; } }
+
 blockquote {
   margin: 20px 0;
   padding-left: 1.5rem;
@@ -1406,6 +1523,37 @@ blockquote {
 
 .no-padding {
   padding: 0 !important; }
+
+#about {
+  background-image: url(../../../../libs/img/ship-A.jpg);
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 0;
+  margin: 0;
+  max-width: none; }
+  @media only screen and (min-width: 768px) {
+    #about {
+      padding: 0; } }
+  @media only screen and (min-width: 1200px) {
+    #about {
+      padding: 0; } }
+  #about section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 5% 50px;
+    height: auto;
+    background-color: #FFFFFF; }
+    @media only screen and (min-width: 768px) {
+      #about section {
+        padding: 150px 5% 50px; } }
+    @media only screen and (min-width: 992px) {
+      #about section {
+        -webkit-box-shadow: 0px -1px 10px 1px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0px -1px 10px 1px rgba(0, 0, 0, 0.25);
+        -ms-box-shadow: 0px -1px 10px 1px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px -1px 10px 1px rgba(0, 0, 0, 0.25); } }
 
 #contact {
   max-width: 1100px; }
@@ -1545,7 +1693,7 @@ blockquote {
   .tile:hover .tile__content, .tile:focus .tile__content {
     top: 0;
     color: #FFFFFF;
-    background: rgba(26, 26, 26, 0.75);
+    background: rgba(0, 10, 20, 0.8);
     padding: 1.5em 1em; }
   .tile:hover .tile__content-wrapper, .tile:focus .tile__content-wrapper {
     transition: all .5s ease-in-out;
@@ -1853,8 +2001,8 @@ main {
       letter-spacing: .2em;
       transition: all 0.3s cubic-bezier(0.53, 0.01, 0.36, 1.63); }
       .intro-nav li a:hover, .intro-nav li a:focus {
-        color: #444444;
-        border-bottom: 2px solid #444444; }
+        color: #003149;
+        border-bottom: 2px solid #003149; }
   @media only screen and (min-width: 480px) {
     .intro-nav li:not(:first-of-type):before {
       content: "|";
@@ -1950,10 +2098,9 @@ main {
         margin: 0 0 1.5em; } }
 
 #services section {
-  margin-bottom: 1em; }
-  @media only screen and (min-width: 480px) {
-    #services section {
-      margin-bottom: 2em; } }
+  background-color: #FFFFFF;
+  position: relative;
+  z-index: 1; }
 
 #services li {
   margin: 0 0 1em 1.5em;
@@ -1966,12 +2113,17 @@ main {
   border-left: 5px solid #c00101;
   border-right: 5px solid #c00101;
   padding: 0 1.5em;
-  margin: 1.5em 10%;
+  margin: 1.5em 2.5%;
   line-height: 1.5;
-  color: #1A1A1A; }
+  color: #1A1A1A;
+  background-color: #FFFFFF; }
   @media only screen and (min-width: 480px) {
     #services .pullquote {
-      font-size: 1.25em; } }
+      font-size: 1.25em;
+      margin: 1.5em 5%; } }
+  @media only screen and (min-width: 768px) {
+    #services .pullquote {
+      margin: 1.5em 10%; } }
 
 #services .flex {
   display: flex;
@@ -2011,17 +2163,34 @@ main {
   right: 0; }
 
 .triangle,
-.approach,
+.approach > div,
 .steps {
   padding: 1em 0; }
 
 .triangle {
-  margin: 1.5em 10% 0; }
-  .triangle li {
-    list-style-type: upper-roman; }
+  margin: 0 10%; }
 
-.approach li {
-  list-style-type: disc; }
-
-.steps li {
-  list-style-type: disc; }
+.approach,
+.steps {
+  border: 1px solid #DCDCDC;
+  background-color: #F3F3F3;
+  border-radius: 1px;
+  padding: 10% 5%;
+  margin: 2.5%;
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
+  -ms-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25); }
+  @media only screen and (min-width: 480px) {
+    .approach,
+    .steps {
+      margin: 5%;
+      padding: 10%; } }
+  @media only screen and (min-width: 768px) {
+    .approach,
+    .steps {
+      margin: 5% 10%;
+      padding: 5% 10%; } }
+  .approach li,
+  .steps li {
+    list-style-type: disc; }

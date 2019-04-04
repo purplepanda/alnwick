@@ -220,8 +220,8 @@
             transition: all .3s cubic-bezier(0.53, 0.01, 0.36, 1.63);
 
             &:hover, &:focus {
-                color: $greyDark;
-                border-bottom: 2px solid $greyDark;
+                color: $blueDark;
+                border-bottom: 2px solid $blueDark;
             }
         }
     }

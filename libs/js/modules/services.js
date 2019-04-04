@@ -23,19 +23,19 @@ $(document).ready(function() {
         $(window).on('load', animateElements());
     }
     
-    var scrollToTop = setInterval(watchTriangle, 200);
-    
-    var watchTriangle = function() {
-        if ($('.triangle').hasClass('active') && $(window).scrollTop() < 600) {
-            var topOfTriangle = $('.triangle').position().top;
-            
-            $('html, body').animate({ scrollTop: topOfTriangle - 20 }, 1500);
-        }
-        
-        clearInterval(scrollToTop);
-    };
-
-    setTimeout(function() {
-        watchTriangle();
-    }, 7500);
+//    var scrollToTop = setInterval(watchTriangle, 200);
+//    
+//    var watchTriangle = function() {
+//        if ($('.triangle').hasClass('active') && $(window).scrollTop() < 600) {
+//            var topOfTriangle = $('.triangle').position().top;
+//            
+//            $('html, body').animate({ scrollTop: topOfTriangle}, 1500);
+//        }
+//        
+//        clearInterval(scrollToTop);
+//    };
+//
+//    setTimeout(function() {
+//        watchTriangle();
+//    }, 3000);
 });
