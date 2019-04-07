@@ -31,7 +31,7 @@ $(window).on('resize', function () {
     closeAllMenus();  
 });
 
-$('a').on('click', function(e) {
+$('.nav a').on('click', function(e) {
     var link = $(this).prop('href'),
         hashIndex = link.indexOf('#');
     

@@ -109,9 +109,13 @@
     color: $grey;
     background-color: transparent;
     border: 0;
+    transition: all .3s ease;
     
-    &:hover, &:focus {
+    &:hover {
         color: $greyDark;
+    }
+    
+    &:focus {
         outline: 0;
     }
     

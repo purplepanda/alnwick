@@ -52,6 +52,7 @@
   text-align: center;
   line-height: 1.1;
   border-radius: 50%;
+  transition: all .3s ease;
     
   &:hover, &:focus {
     color: $greyDark;

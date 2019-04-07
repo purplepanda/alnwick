@@ -933,7 +933,8 @@ template {
   color: #B3B3B3;
   text-align: center;
   line-height: 1.1;
-  border-radius: 50%; }
+  border-radius: 50%;
+  transition: all .3s ease; }
   .modal a.close-modal:hover, .modal a.close-modal:focus {
     color: #444444; }
 
@@ -1073,9 +1074,11 @@ template {
   z-index: 2;
   color: #B3B3B3;
   background-color: transparent;
-  border: 0; }
-  .slick-arrow:hover, .slick-arrow:focus {
-    color: #444444;
+  border: 0;
+  transition: all .3s ease; }
+  .slick-arrow:hover {
+    color: #444444; }
+  .slick-arrow:focus {
     outline: 0; }
   .slick-arrow.slick-prev {
     left: -1.35em; }
@@ -2026,7 +2029,7 @@ main {
       align-items: center; } }
   .project__image {
     position: relative;
-    transition: all 0.5s cubic-bezier(0.53, 0.01, 0.36, 1.63); }
+    transition: all .3s ease; }
     @media only screen and (min-width: 768px) {
       .project__image {
         width: 50%; } }
@@ -2047,9 +2050,21 @@ main {
       background-color: transparent;
       text-align: center;
       font-family: "FontAwesome";
-      font-size: 50px; }
+      font-size: 50px;
+      transition: all .3s ease; }
+    .project__image:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: transparent;
+      transition: all .3s ease; }
     .project__image:hover:before, .project__image:focus:before {
       content: "\f04b"; }
+    .project__image:hover:after, .project__image:focus:after {
+      background-color: rgba(255, 255, 255, 0.25); }
   .project__info {
     padding: 1.5em; }
     @media only screen and (min-width: 768px) {

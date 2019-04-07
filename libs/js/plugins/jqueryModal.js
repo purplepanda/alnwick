@@ -114,7 +114,7 @@
 
     block: function() {
       this.$elm.trigger($.modal.BEFORE_BLOCK, [this._ctx()]);
-      this.$body.css('overflow','hidden');
+      this.$body.css('overflowY','hidden');
       this.$blocker = $('<div class="' + this.options.blockerClass + ' blocker current"></div>').appendTo(this.$body);
       selectCurrent();
       if(this.options.doFade) {
@@ -132,7 +132,7 @@
         this.$blocker = null;
         selectCurrent();
         if (!$.modal.isActive())
-          this.$body.css('overflow','');
+          this.$body.css('overflowY','');
       }
     },
 
@@ -211,7 +211,7 @@
     spinnerHtml: '<div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div>',
     showSpinner: true,
     showClose: true,
-    fadeDuration: null,   // Number of milliseconds the fade animation takes.
+    fadeDuration: 100,   // Number of milliseconds the fade animation takes.
     fadeDelay: 1.0        // Point during the overlay's fade-in that the modal begins to fade in (.5 = 50%, 1.5 = 150%, etc.)
   };
 

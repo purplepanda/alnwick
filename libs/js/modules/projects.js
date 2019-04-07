@@ -1,18 +1,18 @@
 $(document).ready(function() {
-    $(function () {
-        $('select').multipleSelect({
-            filter: true,
-            placeholder: "Filter By Type",
-            width: "100%",
-            onOpen: function () {},
-            onClose: function () {
-                updateFilters();
-            }
-        });
-    });
-    
-    if ($('.projects-filter').length > 0) {
+    if ($('#projects').length > 0) {
         var selectedFilters = [];
+        
+        $(function () {
+            $('select').multipleSelect({
+                filter: true,
+                placeholder: "Filter By Type",
+                width: "100%",
+                onOpen: function () {},
+                onClose: function () {
+                    updateFilters();
+                }
+            });
+        });
 
         function updateFilters() {
             var filters        = $('.ms-drop li'),
@@ -77,13 +77,15 @@ $(document).ready(function() {
       
         $("a[href*='#img']").on("click", function () {
             var carousel = $(this).parent('.project').find('.project__carousel-wrapper');
-
-            carousel.slick({
-                dots: true,
-                infinite: true,
-                speed: 300,
-                slidesToShow: 1,
-            });
+            
+            setTimeout(function() {
+                carousel.slick({
+                    dots: true,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                });    
+            }, 150);
         }); 
     
         $(window).on('scroll', function () {
