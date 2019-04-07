@@ -10,6 +10,7 @@ $(document).ready(function() {
                 onOpen: function () {},
                 onClose: function () {
                     updateFilters();
+                    closeAllMenus();
                 }
             });
         });
@@ -86,6 +87,19 @@ $(document).ready(function() {
                     slidesToShow: 1,
                 });    
             }, 150);
+        }); 
+        
+        $("a[href*='#goppion']").on("click", function () {
+            var carousel = $(this).parent('.nav-projects__item').find('.project__carousel-wrapper');
+
+            setTimeout(function() {
+                carousel.slick({
+                    dots: true,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                });    
+            }, 150);  
         }); 
     
         $(window).on('scroll', function () {
