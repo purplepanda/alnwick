@@ -14,48 +14,9 @@
     transform: perspective(1px) translateY($translateY);
 }
 
-@mixin animation($animate...) {
-    $max: length($animate);
-    $animations: '';
-
-    @for $i from 1 through $max {
-        $animations: #{$animations + nth($animate, $i)};
-
-        @if $i < $max {
-            $animations: #{$animations + ", "};
-        }
-    }
-    -webkit-animation: $animations;
-    -moz-animation:    $animations;
-    -o-animation:      $animations;
-    animation:         $animations;
-}
-
-@mixin keyframes($animationName) {
-    @-webkit-keyframes #{$animationName} {
-        @content;
-    }
-    @-moz-keyframes #{$animationName} {
-        @content;
-    }
-    @-o-keyframes #{$animationName} {
-        @content;
-    }
-    @keyframes #{$animationName} {
-        @content;
-    }
-}
-
-// Scale transition
-.scale-transition {
-  &.scale-out {
-    transform: scale(0);
-    transition: transform .2s !important;
-  }
-
-  &.scale-in {
-    transform: scale(1);
-  }
-
-  transition: transform .3s cubic-bezier(0.53, 0.01, 0.36, 1.63) !important;
+@mixin box-shadow($boxShadow) {
+    -webkit-box-shadow: $boxShadow;
+    -moz-box-shadow:    $boxShadow;
+    -ms-box-shadow:     $boxShadow;
+    box-shadow:         $boxShadow;
 }

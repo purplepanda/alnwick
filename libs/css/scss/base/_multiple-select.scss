@@ -54,10 +54,7 @@
     -moz-border-radius: 1px;
     border-radius: 1px;
     background-color: $white;
-    -webkit-box-shadow: 0px 1px 7px 1px rgba(0,0,0,0.25);
-    -moz-box-shadow:    0px 1px 7px 1px rgba(0,0,0,0.25);
-    -ms-box-shadow:     0px 1px 7px 1px rgba(0,0,0,0.25);
-    box-shadow:         0px 1px 7px 1px rgba(0,0,0,0.25);
+    @include box-shadow(0px 2px 7px 1px rgba(0,0,0,0.25));
 }
 
 .ms-choice:focus {
@@ -130,18 +127,12 @@
 
 .ms-drop.bottom {
     top: 100%;
-    -webkit-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.25);
-    -moz-box-shadow:    0px 2px 5px 1px rgba(0,0,0,0.25);
-    -ms-box-shadow:     0px 2px 5px 1px rgba(0,0,0,0.25);
-    box-shadow:         0px 2px 5px 1px rgba(0,0,0,0.25);
+    @include box-shadow(0px 2px 5px 1px rgba(0,0,0,0.25));
 }
 
 .ms-drop.top {
     bottom: 100%;
-    -webkit-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.25);
-    -moz-box-shadow:    0px 2px 5px 1px rgba(0,0,0,0.25);
-    -ms-box-shadow:     0px 2px 5px 1px rgba(0,0,0,0.25);
-    box-shadow:         0px 2px 5px 1px rgba(0,0,0,0.25);
+    @include box-shadow(0px 2px 5px 1px rgba(0,0,0,0.25));
 }
 
 .ms-search {
@@ -168,9 +159,7 @@
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
+    @include box-shadow(none);
 }
 
 .ms-search, .ms-search input {

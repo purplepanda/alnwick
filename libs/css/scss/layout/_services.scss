@@ -86,10 +86,7 @@
     border-radius: 1px;
     padding: 10% 5%;
     margin: 2.5%;
-    -webkit-box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.25);
-    -moz-box-shadow:    0px 2px 5px 1px rgba(0,0,0,0.25);
-    -ms-box-shadow:     0px 2px 5px 1px rgba(0,0,0,0.25);
-    box-shadow:         0px 2px 5px 1px rgba(0,0,0,0.25);
+    @include box-shadow(0px 2px 5px 1px rgba(0,0,0,0.25));
     
     @media only screen and (min-width: $bp-xsmall) { margin: 5%; padding: 10%;}
     @media only screen and (min-width: $bp-mobile) { margin: 5% 10%; padding: 5% 10%;}
