@@ -2,6 +2,7 @@ function closeAllMenus() {
     $('#menuLink').delay(500).removeClass('open');
     $('.projects-nav').delay(500).removeClass('open');
     $('.nav__list').delay(500).removeClass('show-nav');
+    $('#navbarSubmenuLink').delay(500).removeClass('active');
     $('.subnav__list').delay(500).removeClass('show-subnav');
     $('body').removeClass('modal-open');
 }
@@ -21,6 +22,7 @@ $('#projectMenuLink').on('click', function(e) {
 $('#navbarSubmenuLink').on('click', function(e) {
     e.preventDefault();
     $(this).parent().find('.subnav__list').toggleClass('show-subnav');
+    $(this).toggleClass('active');
 });
 
 $('.nav__list-link:not(.subnav)', '.subnav__list-link').on('click', function(e) {
@@ -64,5 +66,17 @@ $('.nav-projects__list a').on('click', function(e) {
             var topOfElem = $(link.substr(hashIndex)).offset().top;
             $('html, body').animate({scrollTop: topOfElem - 125}, 1500);
         }, 750);
+    }
+});
+
+$('a.tile').on('click', function(e) {
+    var link = $(this).prop('href'),
+        hashIndex = link.indexOf('#');
+    
+    if (hashIndex !== -1 && link.substr(0, hashIndex) === window.location.href.substr(0, hashIndex)) {
+        e.preventDefault();
+
+        var topOfElem = $(link.substr(hashIndex)).offset().top;
+        $('html, body').animate({scrollTop: topOfElem - 25}, 750);
     }
 });

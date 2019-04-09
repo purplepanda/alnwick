@@ -104,6 +104,7 @@ li {
 
 p {
     margin: 0 0 1.5em;
+    text-align: justify;
 }
 
 li {
@@ -144,6 +145,12 @@ i {
 
     &:after {
         content: "\f107";
+    }
+    
+    .active & {
+        &:after {
+            content: "\f106";
+        }
     }
 }
 
