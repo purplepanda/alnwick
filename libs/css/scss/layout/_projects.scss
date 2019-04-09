@@ -3,6 +3,12 @@
     -moz-animation:    fade-in 2.5s ease;
     -o-animation:      fade-in 2.5s ease;
     animation:         fade-in 2.5s ease;
+    
+    main {
+        @media only screen and (min-width: $bp-desktop) {
+            max-width: 1100px;
+        }
+    }
 }
 
 .project {
