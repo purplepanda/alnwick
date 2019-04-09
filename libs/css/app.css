@@ -1474,10 +1474,10 @@ a {
   margin: 5% 20%; }
 
 .dividerB {
-  padding: 25vh; }
+  padding: 40vw; }
   @media only screen and (min-width: 768px) {
     .dividerB {
-      padding: 35vh; } }
+      padding: 25vw; } }
 
 blockquote {
   margin: 20px 0;
@@ -1543,7 +1543,8 @@ blockquote {
       padding: 0; } }
   @media only screen and (min-width: 1200px) {
     #about {
-      padding: 0; } }
+      padding: 0;
+      background-size: 1200px; } }
   #about section {
     max-width: 1100px;
     margin: 0 auto;
