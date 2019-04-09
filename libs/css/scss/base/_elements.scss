@@ -147,7 +147,7 @@ i {
         content: "\f107";
     }
     
-    .active & {
+    .open & {
         &:after {
             content: "\f106";
         }

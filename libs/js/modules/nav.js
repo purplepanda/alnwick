@@ -2,7 +2,7 @@ function closeAllMenus() {
     $('#menuLink').delay(500).removeClass('open');
     $('.projects-nav').delay(500).removeClass('open');
     $('.nav__list').delay(500).removeClass('show-nav');
-    $('#navbarSubmenuLink').delay(500).removeClass('active');
+    $('#navbarSubmenuLink').delay(500).removeClass('open');
     $('.subnav__list').delay(500).removeClass('show-subnav');
     $('body').removeClass('modal-open');
 }
@@ -22,7 +22,7 @@ $('#projectMenuLink').on('click', function(e) {
 $('#navbarSubmenuLink').on('click', function(e) {
     e.preventDefault();
     $(this).parent().find('.subnav__list').toggleClass('show-subnav');
-    $(this).toggleClass('active');
+    $(this).addClass('open');
 });
 
 $('.nav__list-link:not(.subnav)', '.subnav__list-link').on('click', function(e) {
