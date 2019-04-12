@@ -2046,7 +2046,10 @@ main {
     margin: 0 1em;
     color: #B3B3B3;
     text-align: center;
-    line-height: 2.5; }
+    line-height: 2em; }
+    @media only screen and (min-width: 480px) {
+      .intro-nav li {
+        line-height: normal; } }
     .intro-nav li a {
       font-family: "EBGaramond-Medium", Georgia, serif;
       font-size: .85em;
@@ -2060,9 +2063,25 @@ main {
         border-bottom: 2px solid #003149; }
   @media only screen and (min-width: 480px) {
     .intro-nav li:not(:first-of-type):before {
-      content: "|";
+      content: "";
       position: absolute;
-      left: -1em; } }
+      left: -1em;
+      height: 100%;
+      border-left: 2px solid #B3B3B3; } }
+  @media only screen and (min-width: 480px) {
+    .intro-nav__projects {
+      flex-direction: column; }
+      .intro-nav__projects li {
+        line-height: 2.5; }
+      .intro-nav__projects li:not(:first-of-type):before {
+        display: none; } }
+  @media only screen and (min-width: 768px) {
+    .intro-nav__projects {
+      flex-direction: row; }
+      .intro-nav__projects li {
+        line-height: 1.5; }
+      .intro-nav__projects li:not(:first-of-type):before {
+        display: block; } }
 
 #projects {
   -webkit-animation: fade-in 2.5s ease;
@@ -2179,7 +2198,7 @@ main {
     border: 1px solid #DCDCDC;
     background-color: #F3F3F3;
     border-radius: 1px;
-    padding: 2em 1em;
+    padding: 2em 2em 2em 1em;
     margin: 0 0 1em;
     -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
     -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25);
@@ -2187,7 +2206,9 @@ main {
     box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.25); }
     @media only screen and (min-width: 768px) {
       .nav-projects__group {
-        width: 49%; } }
+        width: 49%; }
+        .nav-projects__group.two-column {
+          width: 100%; } }
   .nav-projects__title {
     text-align: center;
     margin: 0 0 2em; }
@@ -2207,43 +2228,59 @@ main {
     color: #444444;
     margin-left: 2em; }
   .nav-projects__item {
-    position: relative; }
+    position: relative;
+    line-height: 1.5;
+    margin: 0 0 1em; }
     .nav-projects__item:before {
       font-family: "FontAwesome";
       content: "\f111";
       position: absolute;
       font-size: 5px;
-      top: 5px;
+      top: 10px;
       left: -15px; }
-    .nav-projects__item-link h5 {
-      text-decoration: underline; }
-    .nav-projects__item-title {
+    .nav-projects__item input[type="checkbox"] {
+      display: none; }
+    .nav-projects__item input[type="checkbox"] + label {
+      font-family: "Lato-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      border-bottom: 1px solid #444444;
       font-size: .85em;
+      letter-spacing: .025em;
+      line-height: 1.2;
       color: #444444;
-      transition: all .5s ease;
-      margin: 0 0 1.5em; }
-    .nav-projects__item-description {
+      margin: 0 0 1.5em;
+      transition: all .5s ease; }
+    .nav-projects__item input[type="checkbox"]:checked + label,
+    .nav-projects__item input[type="checkbox"]:focus + label {
+      color: #003149;
+      border-bottom: 1px solid #003149; }
+    .nav-projects__item input[type="checkbox"] ~ .nav-projects__item-description {
       opacity: 0;
       height: 0;
       font-size: .85em;
       color: #444444;
       margin: 0;
       transition: all .5s ease; }
-
-.nav-projects__item:hover .nav-projects__item-link {
-  color: #444444; }
-
-.nav-projects__item:hover .nav-projects__item-link h5 {
-  color: #c00101; }
-
-.nav-projects__item:hover .nav-projects__item-title {
-  color: #444444; }
-
-.nav-projects__item:hover .nav-projects__item-description {
-  opacity: 1;
-  height: auto;
-  padding: .5em 0;
-  margin: 0 0 2em; }
+    .nav-projects__item input[type="checkbox"]:checked ~ .nav-projects__item-description,
+    .nav-projects__item input[type="checkbox"]:focus ~ .nav-projects__item-description {
+      opacity: 1;
+      height: auto;
+      padding: .5em 0;
+      margin: 0; }
+    .nav-projects__item-link {
+      color: #c00101;
+      border-bottom: 1px solid #c00101;
+      transition: all .5s ease; }
+      .nav-projects__item-link:after {
+        font-family: "FontAwesome";
+        content: '\f178';
+        padding-left: 10px;
+        color: inherit; }
+      .nav-projects__item-link:hover, .nav-projects__item-link:focus {
+        color: #003149;
+        border-bottom: 1px solid #003149; }
+    .nav-projects__item:hover .nav-projects__item-title {
+      color: #c00101;
+      border-bottom: 1px solid #c00101; }
 
 #services section {
   background-color: #FFFFFF;

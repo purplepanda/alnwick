@@ -205,7 +205,11 @@
         margin: 0 1em;
         color: $grey;
         text-align: center;
-        line-height: 2.5;
+        line-height: 2em;
+        
+        @media only screen and (min-width: $bp-xsmall) {
+            line-height: normal;
+        }
         
         a {
             font-family: $fontEBGaramondMedium;
@@ -226,10 +230,42 @@
     li:not(:first-of-type) {
         @media only screen and (min-width: $bp-xsmall) {
             &:before {
-                content: "|";
+                content: "";
                 position: absolute;
                 left: -1em;
+                height: 100%;
+                border-left: 2px solid $grey;
             }
         }
+    }
+    
+    &__projects { 
+        @media only screen and (min-width: $bp-xsmall) {
+            flex-direction: column;
+
+            li {
+                line-height: 2.5;
+            }
+
+            li:not(:first-of-type) {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+        
+        @media only screen and (min-width: $bp-mobile) {
+            flex-direction: row;
+            
+            li {
+                line-height: 1.5;
+            }
+
+            li:not(:first-of-type) {
+                &:before {
+                    display: block;
+                }
+            }
+        } 
     }
 }

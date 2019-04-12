@@ -64,7 +64,7 @@ $('.nav-projects__list a').on('click', function(e) {
         
         setTimeout(function() {
             var topOfElem = $(link.substr(hashIndex)).offset().top;
-            $('html, body').animate({scrollTop: topOfElem - 125}, 1500);
+            $('html, body').animate({scrollTop: topOfElem - 125}, 1000);
         }, 750);
     }
 });
